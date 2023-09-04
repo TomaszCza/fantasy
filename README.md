@@ -7,3 +7,4 @@ Endpoints can be accesed for testing by going to localhost:8080/... while runnin
 
 Endpoints: 
 - /players - returns a list of all players stored in MongoDB 
+- /player/{playerId} - returns a specific player from MongoDB
