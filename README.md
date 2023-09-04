@@ -4,3 +4,6 @@ https://www.mongodb.com/products/platform/cloud - For mongoDB access
 
 Testing:
 Endpoints can be accesed for testing by going to localhost:8080/... while running the app in inteliJ.
+
+Endpoints: 
+- /players - returns a list of all players stored in MongoDB 
