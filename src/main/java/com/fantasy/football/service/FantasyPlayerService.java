@@ -1,4 +1,4 @@
-package com.fantasy.football.controller;
+package com.fantasy.football.service;
 
 import com.fantasy.football.domain.Player;
 import com.fantasy.football.repository.PlayerRepository;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class FantasyController {
+public class FantasyPlayerService {
 
     @Autowired
     private PlayerRepository playerRepository;
@@ -27,5 +27,4 @@ public class FantasyController {
     Optional<Player> getPlayer(@PathVariable int playerId) {
         return playerRepository.findById(playerId);
     }
-
 }
