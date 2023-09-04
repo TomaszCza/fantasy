@@ -8,21 +8,19 @@ import lombok.extern.slf4j.Slf4j;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
-@RestController
 @Slf4j
+@Service
 public class FantasySavingScheduledService {
+
     @Autowired
     private FantasyClient fantasyClient;
 
     @Autowired
     private PlayerRepository playerRepository;
 
-
-    @GetMapping("/saveAllPlayers")
-    public String saveAllPlayers() {
+    public void saveAllPlayers() {
         Gson gson = new Gson();
 
         JSONObject allInfo = new JSONObject(fantasyClient.getAll());
@@ -44,6 +42,6 @@ public class FantasySavingScheduledService {
 
             playerRepository.save(currentPlayer);
         }
-        return "Saved all players :)";
+        log.info("Saved all players :)");
     }
 }
