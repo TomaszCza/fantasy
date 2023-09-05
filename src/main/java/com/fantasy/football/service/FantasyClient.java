@@ -8,5 +8,8 @@ import org.springframework.web.service.annotation.HttpExchange;
 @HttpExchange
 public interface FantasyClient {
     @GetExchange("/bootstrap-static/")
-    String getAll();
+    String getAllPlayers();
+
+    @GetExchange("/fixtures/")
+    String getAllFixtures();
 }

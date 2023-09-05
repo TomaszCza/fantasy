@@ -23,8 +23,13 @@ public class FantasyPlayerService {
         return playerRepository.findAll();
     }
 
+    @CrossOrigin
     @GetMapping("player/{playerId}")
     Optional<Player> getPlayer(@PathVariable int playerId) {
         return playerRepository.findById(playerId);
     }
+
+
+
+
 }
