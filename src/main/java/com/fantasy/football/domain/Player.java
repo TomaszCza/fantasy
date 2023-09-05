@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @Document(collection = "Players")
 public class Player {
-    @Transient
+
     int team;
 
     @Id
